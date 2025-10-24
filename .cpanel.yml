@@ -16,10 +16,9 @@ deployment:
     - /bin/cp products.php $DEPLOYPATH
     - /bin/cp services.php $DEPLOYPATH
     - /bin/cp contact.php $DEPLOYPATH
-    - /bin/cp 404.php $DEPLOYPATH
     - /bin/cp test-domain.php $DEPLOYPATH
-    # Copy .htaccess (Apache configuration for lplk.org.pl)
-    - /bin/cp .htaccess.apache $DEPLOYPATH/.htaccess
+    # Copy .htaccess (universal configuration)
+    - /bin/cp .htaccess $DEPLOYPATH/.htaccess
     
     # Copy includes directory
     - /bin/cp -R includes $DEPLOYPATH
