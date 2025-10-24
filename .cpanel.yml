@@ -4,28 +4,28 @@ deployment:
     - export DEPLOYPATH=/home/asdqwe/public_html/
     - mkdir -p $DEPLOYPATH
     
-    # Copy main PHP files
+    # Copy all PHP files (main pages + includes)
     - /bin/cp index.php $DEPLOYPATH
     - /bin/cp about.php $DEPLOYPATH
     - /bin/cp services.php $DEPLOYPATH
     - /bin/cp contact.php $DEPLOYPATH
     - /bin/cp portfolio.php $DEPLOYPATH
+    - /bin/cp header.php $DEPLOYPATH
+    - /bin/cp footer.php $DEPLOYPATH
+    - /bin/cp navigation.php $DEPLOYPATH
+    
+    # Copy CSS and JS files
+    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp script.js $DEPLOYPATH
     
     # Copy .htaccess
     - /bin/cp .htaccess $DEPLOYPATH/.htaccess
     
-    # Copy includes files to root (no folders)
-    - /bin/cp includes/header.php $DEPLOYPATH/header.php
-    - /bin/cp includes/footer.php $DEPLOYPATH/footer.php
-    - /bin/cp includes/navigation.php $DEPLOYPATH/navigation.php
-    
-    # Copy assets files to root (no folders)
-    - /bin/cp assets/css/style.css $DEPLOYPATH/style.css
-    - /bin/cp assets/js/script.js $DEPLOYPATH/script.js
-    
-    # Copy SSL certificate validation file only
+    # Copy SSL certificate validation file
     - /bin/cp .well-known/pki-validation/EE84DF98F78A881D434B39C8841F506D.txt $DEPLOYPATH/.well-known/pki-validation/
     
     # Set basic permissions
     - /bin/chmod 644 $DEPLOYPATH/*.php
+    - /bin/chmod 644 $DEPLOYPATH/*.css
+    - /bin/chmod 644 $DEPLOYPATH/*.js
     - /bin/chmod 644 $DEPLOYPATH/.htaccess
