@@ -1,0 +1,34 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/asdqwe/public_html/
+    
+    # Copy main PHP files
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp about.php $DEPLOYPATH
+    - /bin/cp products.php $DEPLOYPATH
+    - /bin/cp services.php $DEPLOYPATH
+    - /bin/cp contact.php $DEPLOYPATH
+    
+    # Copy includes directory
+    - /bin/cp -R includes $DEPLOYPATH
+    
+    # Copy assets directory (CSS, JS, images)
+    - /bin/cp -R assets $DEPLOYPATH
+    
+    # Copy SSL certificate validation file
+    - /bin/cp -R .well-known $DEPLOYPATH
+    
+    # Copy any additional files
+    - /bin/cp EE84DF98F78A881D434B39C8841F506D.txt $DEPLOYPATH || true
+    
+    # Set proper permissions
+    - /bin/chmod -R 755 $DEPLOYPATH
+    - /bin/chmod 644 $DEPLOYPATH/*.php
+    - /bin/chmod 644 $DEPLOYPATH/*.txt
+    - /bin/chmod -R 644 $DEPLOYPATH/assets/
+    - /bin/chmod -R 644 $DEPLOYPATH/includes/
+    - /bin/chmod -R 644 $DEPLOYPATH/.well-known/
+    
+    # Create backup of current deployment
+    - /bin/cp -R $DEPLOYPATH $DEPLOYPATH.backup.$(date +%Y%m%d_%H%M%S) || true

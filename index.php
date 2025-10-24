@@ -1,6 +1,6 @@
 <?php
-$page_title = "Home";
-$page_description = "IZO-MAT specializes in thermal insulation materials and solutions for residential and commercial buildings. Professional installation services and energy-efficient solutions.";
+$page_title = "Strona Główna";
+$page_description = "IZO-MAT specjalizuje się w materiałach termoizolacyjnych i rozwiązaniach dla budynków mieszkalnych i komercyjnych. Profesjonalne usługi montażu i energooszczędne rozwiązania.";
 include 'includes/header.php';
 ?>
 
@@ -8,106 +8,106 @@ include 'includes/header.php';
     <main class="main-content">
         <section class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">Professional Thermal Insulation Solutions</h1>
+                <h1 class="hero-title">Profesjonalne Rozwiązania Termoizolacyjne</h1>
                 <p class="hero-description">
-                    IZO-MAT provides high-quality thermal insulation materials and professional installation services for residential and commercial buildings. Save energy and reduce costs with our expert solutions.
+                    IZO-MAT dostarcza wysokiej jakości materiały termoizolacyjne i profesjonalne usługi montażu dla budynków mieszkalnych i komercyjnych. Oszczędzaj energię i redukuj koszty dzięki naszym eksperckim rozwiązaniom.
                 </p>
                 <div class="hero-actions">
                     <a href="contact.php" class="btn btn-primary">
                         <i class="fas fa-phone"></i>
-                        Get Free Quote
+                        Bezpłatna Wycena
                     </a>
                     <a href="products.php" class="btn btn-outline">
                         <i class="fas fa-box"></i>
-                        View Products
+                        Zobacz Produkty
                     </a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="hero-placeholder">
                     <i class="fas fa-home"></i>
-                    <p>Thermal Insulation</p>
+                    <p>Termoizolacja</p>
                 </div>
             </div>
         </section>
 
         <section class="features">
             <div class="section-header">
-                <h2>Why Choose IZO-MAT?</h2>
-                <p>We provide comprehensive thermal insulation solutions with professional expertise</p>
+                <h2>Dlaczego Wybrać IZO-MAT?</h2>
+                <p>Zapewniamy kompleksowe rozwiązania termoizolacyjne z profesjonalnym doświadczeniem</p>
             </div>
             <div class="feature-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-thermometer-half"></i>
                     </div>
-                    <h3>Energy Efficiency</h3>
-                    <p>Reduce heating and cooling costs by up to 40% with our high-quality insulation materials</p>
+                    <h3>Energooszczędność</h3>
+                    <p>Redukcja kosztów ogrzewania i chłodzenia nawet o 40% dzięki wysokiej jakości materiałom izolacyjnym</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-tools"></i>
                     </div>
-                    <h3>Professional Installation</h3>
-                    <p>Expert installation team with years of experience in thermal insulation projects</p>
+                    <h3>Profesjonalny Montaż</h3>
+                    <p>Zespół ekspertów montażu z wieloletnim doświadczeniem w projektach termoizolacyjnych</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Quality Materials</h3>
-                    <p>Only certified, eco-friendly insulation materials from trusted manufacturers</p>
+                    <h3>Materiały Najwyższej Jakości</h3>
+                    <p>Tylko certyfikowane, ekologiczne materiały izolacyjne od zaufanych producentów</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-clock"></i>
                     </div>
-                    <h3>Fast Service</h3>
-                    <p>Quick project completion with minimal disruption to your daily routine</p>
+                    <h3>Szybka Realizacja</h3>
+                    <p>Szybkie zakończenie projektu z minimalnym zakłóceniem codziennej rutyny</p>
                 </div>
             </div>
         </section>
 
         <section class="services-preview">
             <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Comprehensive thermal insulation solutions for every need</p>
+                <h2>Nasze Usługi</h2>
+                <p>Kompleksowe rozwiązania termoizolacyjne na każdą potrzebę</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-image">
                         <i class="fas fa-building"></i>
                     </div>
-                    <h3>Residential Insulation</h3>
-                    <p>Complete thermal insulation solutions for homes, apartments, and residential buildings</p>
-                    <a href="services.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <h3>Termoizolacja Mieszkaniowa</h3>
+                    <p>Kompletne rozwiązania termoizolacyjne dla domów, mieszkań i budynków mieszkalnych</p>
+                    <a href="services.php" class="service-link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <div class="service-image">
                         <i class="fas fa-industry"></i>
                     </div>
-                    <h3>Commercial Projects</h3>
-                    <p>Large-scale insulation projects for offices, warehouses, and commercial facilities</p>
-                    <a href="services.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <h3>Projekty Komercyjne</h3>
+                    <p>Duże projekty izolacyjne dla biur, magazynów i obiektów komercyjnych</p>
+                    <a href="services.php" class="service-link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <div class="service-image">
                         <i class="fas fa-hammer"></i>
                     </div>
-                    <h3>Renovation Services</h3>
-                    <p>Thermal insulation upgrades for existing buildings and renovation projects</p>
-                    <a href="services.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <h3>Usługi Renowacyjne</h3>
+                    <p>Modernizacje termoizolacyjne dla istniejących budynków i projektów renowacyjnych</p>
+                    <a href="services.php" class="service-link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
         <section class="cta-section">
             <div class="cta-content">
-                <h2>Ready to Improve Your Building's Energy Efficiency?</h2>
-                <p>Contact us today for a free consultation and quote</p>
+                <h2>Gotowy na Poprawę Energooszczędności Twojego Budynku?</h2>
+                <p>Skontaktuj się z nami już dziś, aby uzyskać bezpłatną konsultację i wycenę</p>
                 <a href="contact.php" class="btn btn-primary btn-large">
                     <i class="fas fa-phone"></i>
-                    Contact Us Now
+                    Skontaktuj się Teraz
                 </a>
             </div>
         </section>

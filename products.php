@@ -1,14 +1,14 @@
 <?php
-$page_title = "Products";
-$page_description = "Explore IZO-MAT's range of high-quality thermal insulation materials including mineral wool, polystyrene, and specialized insulation products.";
+$page_title = "Produkty";
+$page_description = "Poznaj gamę wysokiej jakości materiałów termoizolacyjnych IZO-MAT, w tym wełnę mineralną, polistyren i specjalistyczne produkty izolacyjne.";
 include 'includes/header.php';
 ?>
 
 <div class="container">
     <main class="main-content">
         <section class="page-header">
-            <h1>Our Products</h1>
-            <p>High-quality thermal insulation materials for every application</p>
+            <h1>Nasze Produkty</h1>
+            <p>Wysokiej jakości materiały termoizolacyjne na każdą aplikację</p>
         </section>
 
         <section class="products-section">

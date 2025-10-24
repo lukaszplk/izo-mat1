@@ -1,6 +1,6 @@
 <?php
-$page_title = "Contact";
-$page_description = "Contact IZO-MAT for thermal insulation services. Get a free quote, consultation, or ask questions about our products and services.";
+$page_title = "Kontakt";
+$page_description = "Skontaktuj się z IZO-MAT w sprawie usług termoizolacyjnych. Uzyskaj bezpłatną wycenę, konsultację lub zadaj pytania o nasze produkty i usługi.";
 include 'includes/header.php';
 
 // Handle form submission
@@ -45,30 +45,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <div class="container">
     <main class="main-content">
         <section class="page-header">
-            <h1>Contact Us</h1>
-            <p>Get in touch for a free consultation and quote</p>
+            <h1>Skontaktuj się z Nami</h1>
+            <p>Skontaktuj się z nami, aby uzyskać bezpłatną konsultację i wycenę</p>
         </section>
 
         <?php if ($message_sent): ?>
         <div class="success-message">
             <i class="fas fa-check-circle"></i>
-            <h3>Thank You!</h3>
-            <p>Your message has been sent successfully. We'll get back to you within 24 hours.</p>
+            <h3>Dziękujemy!</h3>
+            <p>Twoja wiadomość została wysłana pomyślnie. Odpowiemy w ciągu 24 godzin.</p>
         </div>
         <?php endif; ?>
 
         <?php if ($error_message): ?>
         <div class="error-message">
             <i class="fas fa-exclamation-triangle"></i>
-            <h3>Error</h3>
+            <h3>Błąd</h3>
             <p><?php echo $error_message; ?></p>
         </div>
         <?php endif; ?>
 
         <div class="contact-content">
             <div class="contact-info">
-                <h2>Get In Touch</h2>
-                <p>Ready to improve your building's energy efficiency? Contact us today for a free consultation and detailed quote.</p>
+                <h2>Skontaktuj się z Nami</h2>
+                <p>Gotowy na poprawę energooszczędności swojego budynku? Skontaktuj się z nami już dziś, aby uzyskać bezpłatną konsultację i szczegółową wycenę.</p>
                 
                 <div class="contact-details">
                     <div class="contact-item">
