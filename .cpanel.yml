@@ -3,6 +3,9 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/asdqwe/public_html/
     
+    # Alternative: If you have a subdomain or specific folder
+    # - export DEPLOYPATH=/home/asdqwe/public_html/yourdomain.com/
+    
     # Copy main PHP files
     - /bin/cp index.php $DEPLOYPATH
     - /bin/cp about.php $DEPLOYPATH
@@ -17,6 +20,9 @@ deployment:
     
     # Copy assets directory (CSS, JS, images)
     - /bin/cp -R assets $DEPLOYPATH
+    
+    # Ensure JavaScript file is copied
+    - /bin/cp assets/js/script.js $DEPLOYPATH/assets/js/ || true
     
     # Copy SSL certificate validation file
     - /bin/cp -R .well-known $DEPLOYPATH
