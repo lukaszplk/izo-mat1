@@ -4,7 +4,7 @@ deployment:
     - export DEPLOYPATH=/home/asdqwe/public_html/
     - mkdir -p $DEPLOYPATH
     
-    # Copy main PHP files
+    # Copy main PHP files only
     - /bin/cp index.php $DEPLOYPATH
     - /bin/cp about.php $DEPLOYPATH
     - /bin/cp services.php $DEPLOYPATH
@@ -14,17 +14,18 @@ deployment:
     # Copy .htaccess
     - /bin/cp .htaccess $DEPLOYPATH/.htaccess
     
-    # Copy includes directory
-    - /bin/cp -R includes $DEPLOYPATH
+    # Copy includes files individually (no folder)
+    - /bin/cp includes/header.php $DEPLOYPATH/includes/
+    - /bin/cp includes/footer.php $DEPLOYPATH/includes/
+    - /bin/cp includes/navigation.php $DEPLOYPATH/includes/
     
-    # Copy assets directory with proper permissions
-    - /bin/cp -R assets $DEPLOYPATH
-    - /bin/chmod -R 755 $DEPLOYPATH/assets
-    - /bin/chmod -R 644 $DEPLOYPATH/assets/*
+    # Copy assets files individually (no folder)
+    - /bin/cp assets/css/style.css $DEPLOYPATH/assets/css/
+    - /bin/cp assets/js/script.js $DEPLOYPATH/assets/js/
     
-    # Copy SSL certificate validation
-    - /bin/cp -R .well-known $DEPLOYPATH
+    # Copy SSL certificate validation file only
+    - /bin/cp .well-known/pki-validation/EE84DF98F78A881D434B39C8841F506D.txt $DEPLOYPATH/.well-known/pki-validation/
     
-    # Set proper permissions
+    # Set basic permissions
     - /bin/chmod 644 $DEPLOYPATH/*.php
     - /bin/chmod 644 $DEPLOYPATH/.htaccess
