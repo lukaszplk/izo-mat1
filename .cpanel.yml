@@ -24,8 +24,10 @@ deployment:
     # Copy includes directory
     - /bin/cp -R includes $DEPLOYPATH
     
-    # Copy assets directory (CSS, JS, images)
+    # Copy assets directory (CSS, JS, images) - ensure it's copied
     - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R assets/css $DEPLOYPATH/assets/ || true
+    - /bin/cp -R assets/js $DEPLOYPATH/assets/ || true
     
     # Ensure JavaScript file is copied
     - /bin/cp assets/js/script.js $DEPLOYPATH/assets/js/ || true
