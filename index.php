@@ -13,11 +13,11 @@ include 'includes/header.php';
                     IZO-MAT dostarcza wysokiej jakości materiały termoizolacyjne i profesjonalne usługi montażu dla budynków mieszkalnych i komercyjnych. Oszczędzaj energię i redukuj koszty dzięki naszym eksperckim rozwiązaniom.
                 </p>
                 <div class="hero-actions">
-                    <a href="contact.php" class="btn btn-primary">
+                    <a href="/contact" class="btn btn-primary">
                         <i class="fas fa-phone"></i>
                         Bezpłatna Wycena
                     </a>
-                    <a href="products.php" class="btn btn-outline">
+                    <a href="/products" class="btn btn-outline">
                         <i class="fas fa-box"></i>
                         Zobacz Produkty
                     </a>
@@ -80,7 +80,7 @@ include 'includes/header.php';
                     </div>
                     <h3>Termoizolacja Mieszkaniowa</h3>
                     <p>Kompletne rozwiązania termoizolacyjne dla domów, mieszkań i budynków mieszkalnych</p>
-                    <a href="services.php" class="service-link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
+                    <a href="/services" class="service-link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <div class="service-image">
@@ -88,7 +88,7 @@ include 'includes/header.php';
                     </div>
                     <h3>Projekty Komercyjne</h3>
                     <p>Duże projekty izolacyjne dla biur, magazynów i obiektów komercyjnych</p>
-                    <a href="services.php" class="service-link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
+                    <a href="/services" class="service-link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <div class="service-image">
@@ -96,7 +96,7 @@ include 'includes/header.php';
                     </div>
                     <h3>Usługi Renowacyjne</h3>
                     <p>Modernizacje termoizolacyjne dla istniejących budynków i projektów renowacyjnych</p>
-                    <a href="services.php" class="service-link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
+                    <a href="/services" class="service-link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
@@ -105,7 +105,7 @@ include 'includes/header.php';
             <div class="cta-content">
                 <h2>Gotowy na Poprawę Energooszczędności Twojego Budynku?</h2>
                 <p>Skontaktuj się z nami już dziś, aby uzyskać bezpłatną konsultację i wycenę</p>
-                <a href="contact.php" class="btn btn-primary btn-large">
+                <a href="/contact" class="btn btn-primary btn-large">
                     <i class="fas fa-phone"></i>
                     Skontaktuj się Teraz
                 </a>

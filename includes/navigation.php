@@ -1,7 +1,7 @@
 <header class="header">
     <div class="header-content">
         <div class="logo-section">
-            <a href="index.php" class="logo">
+            <a href="/" class="logo">
                 <i class="fas fa-home"></i>
                 <span>IZO-MAT</span>
             </a>
@@ -10,11 +10,11 @@
         
         <nav class="nav">
             <ul class="nav-list">
-                <li><a href="index.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">Strona Główna</a></li>
-                <li><a href="about.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : ''; ?>">O Nas</a></li>
-                <li><a href="products.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'products.php' ? 'active' : ''; ?>">Produkty</a></li>
-                <li><a href="services.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'services.php' ? 'active' : ''; ?>">Usługi</a></li>
-                <li><a href="contact.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : ''; ?>">Kontakt</a></li>
+                <li><a href="/" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">Strona Główna</a></li>
+                <li><a href="/about" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : ''; ?>">O Nas</a></li>
+                <li><a href="/products" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'products.php' ? 'active' : ''; ?>">Produkty</a></li>
+                <li><a href="/services" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'services.php' ? 'active' : ''; ?>">Usługi</a></li>
+                <li><a href="/contact" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : ''; ?>">Kontakt</a></li>
             </ul>
         </nav>
         

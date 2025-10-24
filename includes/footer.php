@@ -12,11 +12,11 @@
             <div class="footer-section">
                 <h4>Szybkie Linki</h4>
                 <ul>
-                    <li><a href="index.php">Strona Główna</a></li>
-                    <li><a href="about.php">O Nas</a></li>
-                    <li><a href="products.php">Produkty</a></li>
-                    <li><a href="services.php">Usługi</a></li>
-                    <li><a href="contact.php">Kontakt</a></li>
+                    <li><a href="/">Strona Główna</a></li>
+                    <li><a href="/about">O Nas</a></li>
+                    <li><a href="/products">Produkty</a></li>
+                    <li><a href="/services">Usługi</a></li>
+                    <li><a href="/contact">Kontakt</a></li>
                 </ul>
             </div>
             <div class="footer-section">
