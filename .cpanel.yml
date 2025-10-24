@@ -13,7 +13,8 @@ deployment:
     - /bin/cp services.php $DEPLOYPATH
     - /bin/cp contact.php $DEPLOYPATH
     - /bin/cp 404.php $DEPLOYPATH
-    - /bin/cp .htaccess $DEPLOYPATH
+    # Copy .htaccess (use production version for live site)
+    - /bin/cp .htaccess.production $DEPLOYPATH/.htaccess
     
     # Copy includes directory
     - /bin/cp -R includes $DEPLOYPATH
