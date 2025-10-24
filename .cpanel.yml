@@ -3,8 +3,8 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/asdqwe/public_html/
     
-    # Alternative: If you have a subdomain or specific folder
-    # - export DEPLOYPATH=/home/asdqwe/public_html/yourdomain.com/
+    # For lplk.org.pl domain - ensure proper directory structure
+    - mkdir -p $DEPLOYPATH
     
     # Copy main PHP files
     - /bin/cp index.php $DEPLOYPATH
@@ -13,8 +13,9 @@ deployment:
     - /bin/cp services.php $DEPLOYPATH
     - /bin/cp contact.php $DEPLOYPATH
     - /bin/cp 404.php $DEPLOYPATH
-    # Copy .htaccess (use production version for live site)
-    - /bin/cp .htaccess.production $DEPLOYPATH/.htaccess
+    - /bin/cp test-domain.php $DEPLOYPATH
+    # Copy .htaccess (domain-specific for lplk.org.pl)
+    - /bin/cp .htaccess.lplk $DEPLOYPATH/.htaccess
     
     # Copy includes directory
     - /bin/cp -R includes $DEPLOYPATH
@@ -31,13 +32,22 @@ deployment:
     # Copy any additional files
     - /bin/cp EE84DF98F78A881D434B39C8841F506D.txt $DEPLOYPATH || true
     
-    # Set proper permissions
+    # Set proper permissions (fix 403 errors)
     - /bin/chmod -R 755 $DEPLOYPATH
     - /bin/chmod 644 $DEPLOYPATH/*.php
     - /bin/chmod 644 $DEPLOYPATH/*.txt
+    - /bin/chmod 644 $DEPLOYPATH/.htaccess
     - /bin/chmod -R 644 $DEPLOYPATH/assets/
     - /bin/chmod -R 644 $DEPLOYPATH/includes/
     - /bin/chmod -R 644 $DEPLOYPATH/.well-known/
+    
+    # Ensure directories are executable
+    - /bin/chmod 755 $DEPLOYPATH/assets
+    - /bin/chmod 755 $DEPLOYPATH/assets/css
+    - /bin/chmod 755 $DEPLOYPATH/assets/js
+    - /bin/chmod 755 $DEPLOYPATH/includes
+    - /bin/chmod 755 $DEPLOYPATH/.well-known
+    - /bin/chmod 755 $DEPLOYPATH/.well-known/pki-validation
     
     # Create backup of current deployment
     - /bin/cp -R $DEPLOYPATH $DEPLOYPATH.backup.$(date +%Y%m%d_%H%M%S) || true
