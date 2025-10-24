@@ -3,5 +3,28 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/asdqwe/public_html/
     - mkdir -p $DEPLOYPATH
+    
+    # Copy main PHP files
     - /bin/cp index.php $DEPLOYPATH
-    - /bin/chmod 644 $DEPLOYPATH/index.php
+    - /bin/cp about.php $DEPLOYPATH
+    - /bin/cp services.php $DEPLOYPATH
+    - /bin/cp contact.php $DEPLOYPATH
+    - /bin/cp portfolio.php $DEPLOYPATH
+    
+    # Copy .htaccess
+    - /bin/cp .htaccess $DEPLOYPATH/.htaccess
+    
+    # Copy includes directory
+    - /bin/cp -R includes $DEPLOYPATH
+    
+    # Copy assets directory with proper permissions
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/chmod -R 755 $DEPLOYPATH/assets
+    - /bin/chmod -R 644 $DEPLOYPATH/assets/*
+    
+    # Copy SSL certificate validation
+    - /bin/cp -R .well-known $DEPLOYPATH
+    
+    # Set proper permissions
+    - /bin/chmod 644 $DEPLOYPATH/*.php
+    - /bin/chmod 644 $DEPLOYPATH/.htaccess
