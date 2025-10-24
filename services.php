@@ -1,7 +1,7 @@
 <?php
 $page_title = "Usługi";
 $page_description = "IZO-MAT - Pełna oferta usług hydroizolacyjnych: hydroizolacje, osuszanie budynków, izolacje zbiorników, basenów, tarasów, balkonów, izolacje kurtynowe, dachów odwróconych.";
-include 'includes/header.php';
+include 'header.php';
 ?>
 
 <div class="container">
@@ -179,4 +179,4 @@ include 'includes/header.php';
     </main>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'footer.php'; ?>

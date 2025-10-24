@@ -1,7 +1,7 @@
 <?php
 $page_title = "O Nas";
 $page_description = "IZO-MAT - Informacje o firmie działającej w branży hydroizolacyjnej od 2003 roku. Solidność, rzetelność, niezawodność w realizacji zleceń w całej Polsce.";
-include 'includes/header.php';
+include 'header.php';
 ?>
 
 <div class="container">
@@ -94,4 +94,4 @@ include 'includes/header.php';
     </main>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'footer.php'; ?>

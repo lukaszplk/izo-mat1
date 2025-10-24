@@ -1,7 +1,7 @@
 <?php
 $page_title = "Realizacje";
 $page_description = "IZO-MAT - Zobacz nasze realizacje hydroizolacyjne. Projekty w Rzeszowie, Nowym Sączu, Mielcu, Gręboszowie. Dach odwrócony, fontanna, izolacja dachu, hydroizolacja.";
-include 'includes/header.php';
+include 'header.php';
 ?>
 
 <div class="container">
@@ -264,4 +264,4 @@ include 'includes/header.php';
     </main>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'footer.php'; ?>

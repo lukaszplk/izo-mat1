@@ -1,7 +1,7 @@
 <?php
 $page_title = "Kontakt";
 $page_description = "IZO-MAT - Skontaktuj się z nami. Telefon: +48 606 900 346, Email: izomatrs@op.pl. Adres: ul. Elektryczna 2, 33-100 Tarnów. Zamów bezpłatną wycenę hydroizolacji.";
-include 'includes/header.php';
+include 'header.php';
 ?>
 
 <div class="container">
@@ -183,4 +183,4 @@ include 'includes/header.php';
     </main>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'footer.php'; ?>

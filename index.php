@@ -1,7 +1,7 @@
 <?php
 $page_title = "Strona Główna";
 $page_description = "IZO-MAT - Hydroizolacje budynków w Tarnowie. Osuszanie budynków, izolacje zbiorników, basenów, tarasów, balkonów. Profesjonalne usługi hydroizolacyjne od 2003 roku.";
-include 'includes/header.php';
+include 'header.php';
 ?>
 
 <div class="container">
@@ -197,4 +197,4 @@ include 'includes/header.php';
     </main>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'footer.php'; ?>
