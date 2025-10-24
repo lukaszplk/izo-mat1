@@ -6,6 +6,10 @@ deployment:
     # For lplk.org.pl domain - ensure proper directory structure
     - mkdir -p $DEPLOYPATH
     
+    # Alternative paths to try if main path doesn't work
+    # - export DEPLOYPATH=/home/asdqwe/public_html/lplk.org.pl/
+    # - export DEPLOYPATH=/home/asdqwe/domains/lplk.org.pl/public_html/
+    
     # Copy main PHP files
     - /bin/cp index.php $DEPLOYPATH
     - /bin/cp about.php $DEPLOYPATH
@@ -14,8 +18,8 @@ deployment:
     - /bin/cp contact.php $DEPLOYPATH
     - /bin/cp 404.php $DEPLOYPATH
     - /bin/cp test-domain.php $DEPLOYPATH
-    # Copy .htaccess (domain-specific for lplk.org.pl)
-    - /bin/cp .htaccess.lplk $DEPLOYPATH/.htaccess
+    # Copy .htaccess (Apache configuration for lplk.org.pl)
+    - /bin/cp .htaccess.apache $DEPLOYPATH/.htaccess
     
     # Copy includes directory
     - /bin/cp -R includes $DEPLOYPATH

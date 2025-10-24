@@ -1,0 +1,63 @@
+# IZO-MAT Configuration for lplk.org.pl
+# LiteSpeed Web Server compatible .htaccess
+
+RewriteEngine On
+
+# Remove .php extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Redirect .php extension to clean URL
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteRule ^ /%1? [NC,L,R=301]
+
+# Force www to non-www
+RewriteCond %{HTTP_HOST} ^www\.lplk\.org\.pl$ [NC]
+RewriteRule ^(.*)$ http://lplk.org.pl/$1 [R=301,L]
+
+# Custom Error Pages
+ErrorDocument 404 /404.php
+
+# Compression (LiteSpeed compatible)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Browser Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+</IfModule>
+
+# Prevent access to sensitive files
+<Files ".htaccess">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Default index files
+DirectoryIndex index.php index.html
+
+# Prevent directory browsing
+Options -Indexes
+
+# Allow SSL certificate validation
+<Directory ".well-known">
+    AllowOverride None
+    Require all granted
+</Directory>
+
+# LiteSpeed specific configuration
+<IfModule mod_lsapi.c>
+    php_admin_value engine On
+</IfModule>
