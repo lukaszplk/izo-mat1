@@ -1,61 +1,24 @@
-# IZO-MAT Website Configuration
-# Universal .htaccess for both asdqwe.webd.pro and lplk.org.pl
+# IZO-MAT Universal .htaccess
+# Simple version that works on both localhost and production
 
 RewriteEngine On
+
+# Force HTTPS for production domains only
+RewriteCond %{HTTP_HOST} ^(www\.)?lplk\.org\.pl$ [NC]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Remove .php extension from URLs
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
-# Redirect .php extension to clean URL
-RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
-RewriteRule ^ /%1? [NC,L,R=301]
-
 # Force www to non-www for lplk.org.pl
 RewriteCond %{HTTP_HOST} ^www\.lplk\.org\.pl$ [NC]
-RewriteRule ^(.*)$ http://lplk.org.pl/$1 [R=301,L]
-
-# Compression
-<IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/plain
-    AddOutputFilterByType DEFLATE text/html
-    AddOutputFilterByType DEFLATE text/css
-    AddOutputFilterByType DEFLATE application/javascript
-    AddOutputFilterByType DEFLATE application/x-javascript
-</IfModule>
-
-# Browser Caching
-<IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresByType text/css "access plus 1 month"
-    ExpiresByType application/javascript "access plus 1 month"
-    ExpiresByType image/png "access plus 1 month"
-    ExpiresByType image/jpg "access plus 1 month"
-    ExpiresByType image/jpeg "access plus 1 month"
-    ExpiresByType image/gif "access plus 1 month"
-</IfModule>
-
-# Prevent access to sensitive files
-<Files ".htaccess">
-    Order allow,deny
-    Deny from all
-</Files>
+RewriteRule ^(.*)$ https://lplk.org.pl/$1 [R=301,L]
 
 # Default index files
 DirectoryIndex index.php index.html
 
 # Prevent directory browsing
 Options -Indexes
-
-# Allow SSL certificate validation
-<Directory ".well-known">
-    AllowOverride None
-    Require all granted
-</Directory>
-
-# Fix 403 errors - ensure proper access
-<Directory "/home/asdqwe/public_html">
-    AllowOverride All
-    Require all granted
-</Directory>
